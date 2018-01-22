@@ -28,7 +28,7 @@ for stock in stocks:
 
 
 # 2. Add the above list to a database
-pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/stocks.db"
+pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/resources/stocks.db"
 
 connection = _sqlite3.connect(pathToDB)
 cursor = connection.cursor()

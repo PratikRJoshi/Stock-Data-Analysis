@@ -1,6 +1,6 @@
 import _sqlite3
 
-pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/sample.db"
+pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/resources/sample.db"
 connection = _sqlite3.connect(pathToDB)
 cursor = connection.cursor()
 x = 'john@email.com',

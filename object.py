@@ -6,7 +6,7 @@ class Stock: pass
 # create list of tuples
 def getStocks():
     stockList = []
-    pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/stocks.db"
+    pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/resources/stocks.db"
     connection = _sqlite3.connect(pathToDB)
     cursor = connection.cursor()
     cursor.execute('SELECT date, close, high, low, open, volume, symbol from stockprices')
@@ -34,6 +34,6 @@ for x in stockList:
     print(x.date, x.close, x.symbol)
 
 # write data to picke file
-myFile = open("objectPickle.list", "wb")
+myFile = open("resources/objectPickle.list", "wb")
 cPickle.dump(stockList, myFile, 2)
 myFile.close()

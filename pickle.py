@@ -4,7 +4,7 @@ import _pickle as cPickle
 # create list of tuples
 def getStocks():
     stockList = []
-    pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/stocks.db"
+    pathToDB = "/Users/pratik.joshi/Documents/Projects/Python/resources/stocks.db"
     connection = _sqlite3.connect(pathToDB)
     cursor = connection.cursor()
     cursor.execute('SELECT date, close, high, low, open, volume, symbol from stockprices')
@@ -20,6 +20,6 @@ stockList = getStocks()
 print(len(stockList))
 
 # write pickle
-myfile = open("stockPickle.dat", "wb")
+myfile = open("resources/stockPickle.dat", "wb")
 cPickle.dump(stockList, myfile, 2)
 myfile.close()
