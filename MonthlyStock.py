@@ -21,5 +21,6 @@ with open(fileName, 'w') as file:
             closePrice = stockQuotes[date]["4. close"]
             highPrice = stockQuotes[date]["2. high"]
             lowPrice = stockQuotes[date]["3. low"]
+            volume = stockQuotes[date]["6. volume"]
             file.write(stock + "," + openPrice + "," + closePrice + "," + highPrice + "," + lowPrice + "\n")
 file.close()
